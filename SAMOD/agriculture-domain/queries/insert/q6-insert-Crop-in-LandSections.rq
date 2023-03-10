@@ -1,0 +1,85 @@
+ PREFIX was: <https://was-course.interactions.ics.unisg.ch/farm-ontology#>
+PREFIX hmas: <https://purl.org/hmas/>
+PREFIX td: <https://www.w3.org/2019/wot/td#>
+PREFIX wotsec: <https://www.w3.org/2019/wot/security#>
+PREFIX htv: <http://www.w3.org/2011/http#>
+PREFIX hctl: <https://www.w3.org/2019/wot/hypermedia#>
+PREFIX js: <https://www.w3.org/2019/wot/json-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#>
+    {
+        ?LandSection1 hmas:contains ?CropA.
+        ?CropA a td:Thing, was:Crop;
+  			td:title "CropA grows in LandSection1";
+
+.
+    }.
+} WHERE {
+	?farm a was:Farm.
+    ?farm hmas:contains ?LandSection1.
+    ?LandSection1 a was:LandSection.
+    ?LandSection1 td:title "Landsection1 of the farm".
+
+
+
+  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#CropA-", strUUID())) AS ?CropA)
+};
+INSERT {
+    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#>
+    {
+        ?LandSection1 hmas:contains ?CropB.
+        ?CropB a td:Thing, was:Crop;
+  			td:title "CropB of LandSection2";
+
+.
+    }.
+} WHERE {
+	?farm a was:Farm.
+    ?farm hmas:contains ?LandSection2.
+    ?LandSection2 a was:LandSection.
+    ?LandSection2 td:title "Landsection2 of the farm".
+
+
+
+  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#CropB-", strUUID())) AS ?CropB)
+};
+INSERT {
+    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#>
+    {
+        ?LandSection1 hmas:contains ?CropC.
+        ?CropC a td:Thing, was:Crop;
+  			td:title "CropC of LandSection3";
+
+.
+    }.
+} WHERE {
+	?farm a was:Farm.
+    ?farm hmas:contains ?LandSection3.
+    ?LandSection3 a was:LandSection.
+    ?LandSection3 td:title "Landsection3 of the farm".
+
+
+
+  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#CropC-", strUUID())) AS ?CropC)
+};
+INSERT {
+    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#>
+    {
+        ?LandSection1 hmas:contains ?CropD.
+        ?CropD a td:Thing, was:Crop;
+  			td:title "CropD of LandSection4";
+
+.
+    }.
+} WHERE {
+	?farm a was:Farm.
+    ?farm hmas:contains ?LandSection4.
+    ?LandSection4 a was:LandSection.
+    ?LandSection4 td:title "Landsection4 of the farm".
+
+
+
+  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#CropD-", strUUID())) AS ?CropD)
+};

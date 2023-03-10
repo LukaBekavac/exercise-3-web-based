@@ -1,0 +1,15 @@
+ PREFIX was: <https://was-course.interactions.ics.unisg.ch/farm-ontology#>
+PREFIX hmas: <https://purl.org/hmas/>
+PREFIX td: <https://www.w3.org/2019/wot/td#>
+
+SELECT ?Crop WHERE {
+GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#> {
+   bind (<https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#farm-88120fee-91ff-46c2-ab2c-01aab329e0a2> as ?farm)
+   ?farm a was:Farm.
+   ?farm hmas:contains ?LandSection1.
+   ?LandSection1 a was:LandSection.
+   ?Landsection1 hmas:contains ?Crop.
+   ?Crop a was:Crop.
+   ?LandSection1 td:title "Landsection1 of the farm".
+ }
+}
