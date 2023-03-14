@@ -35,5 +35,5 @@ The tractors are operated by two autonomous agents: An agent that monitors the c
 - **LandSection**: A section on Farmland which grows a specific kind of Crop
 - **Crop**: A Crop which is farmed 
 - **CropType**: The type of crop which is either wheat or corn
-- 
-- *Complete the glossary for definiting terms required to model the motivating scenario of the domain. These terms will then be formally defined in your TBox.*
+- **Wheat**:  A type of crop
+- **Corn**: A type of crop
