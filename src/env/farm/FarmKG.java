@@ -197,21 +197,20 @@ public class FarmKG extends Artifact {
         String cropValue = "fakeCrop";
         Object[] coordinatesValue = new Object[]{ 0, 0, 1, 1 };
 
-        String queryString = "SELECT ?crop WHERE {\n" +
+        String queryString = "\n" +
+                "SELECT ?Crop WHERE {\n" +
                 "GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#> {\n" +
-                "   bind (<"+LandSection+"> as ?LandSection)\n" +
-                "   ?LandSection a was:?LandSection.\n" +
-                "   ?LandSection hmas:contains ?crop.\n" +
-                "   ?crop a was:Crop.\n " +
+                " <"+LandSection+"> hmas:contains ?Crop.\n" +
+                "   ?Crop a was:Crop.\n" +
                 " }\n" +
-                "}";
+                "}\n";
         String queryStr = PREFIXES + queryString;
 
         JsonArray farmBindings = executeQuery(queryStr);
 
         JsonObject firstBinding = farmBindings.get(0).getAsJsonObject();
 
-        JsonObject tdBinding = firstBinding.getAsJsonObject("crop");
+        JsonObject tdBinding = firstBinding.getAsJsonObject("Crop");
         final var tdValue = tdBinding.getAsJsonPrimitive("value").getAsString();
 
         // sets the value of interest to the OpFeedbackParam
@@ -225,8 +224,8 @@ public class FarmKG extends Artifact {
 
         String queryString = "SELECT ?moisture WHERE {\n" +
                 "GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#> {\n" +
-                "   bind (<"+ crop+"> as ?crop)\n" +
-                "   ?crop was:hasSoilmoisture ?moisture. \n" +
+                "   bind (<"+crop+"> as ?crop)\n" +
+                "   ?crop td:hasrequiredMoisture ?moisture. \n" +
                 " }\n" +
                 "}";
         String queryStr = PREFIXES + queryString;
