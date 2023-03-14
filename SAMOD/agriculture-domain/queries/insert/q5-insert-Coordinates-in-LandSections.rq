@@ -8,80 +8,58 @@ PREFIX js: <https://www.w3.org/2019/wot/json-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT {
-    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#>
+    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#>
     {
-        ?LandSection1 hmas:contains ?Coordinates1.
+        <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-1> hmas:contains ?Coordinates1.
         ?Coordinates1 a td:Thing, was:Coordinates;
   			td:title "Coordinates1 of LandSection1";
             td:hasCoordinates "0,0,1,1";
 .
     }.
 } WHERE {
-	?farm a was:Farm.
-    ?farm hmas:contains ?LandSection1.
-    ?LandSection1 a was:LandSection.
-    ?LandSection1 td:title "Landsection1 of the farm".
 
 
-
-  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#Coordinates-", strUUID())) AS ?Coordinates1)
+  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#Coordinates-1")) AS ?Coordinates1)
 };
+
 INSERT {
-    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#>
+    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#>
     {
-        ?LandSection2 hmas:contains ?Coordinates2.
+        <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-2> hmas:contains ?Coordinates2.
         ?Coordinates2 a td:Thing, was:Coordinates;
   			td:title "Coordinates2 of LandSection2";
             td:hasCoordinates "1,0,2,1";
 .
     }.
 } WHERE {
-	?farm a was:Farm.
-    ?farm hmas:contains ?LandSection2.
-    ?LandSection2 a was:LandSection.
-    ?LandSection2 td:title "Landsection2 of the farm".
 
 
 
-  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#Coordinates-", strUUID())) AS ?Coordinates2)
+  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#Coordinates-2")) AS ?Coordinates2)
 };
 INSERT {
-    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#>
+    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#>
     {
-        ?LandSection3 hmas:contains ?Coordinates3.
+        <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-3> hmas:contains ?Coordinates3.
         ?Coordinates3 a td:Thing, was:Coordinates;
   			td:title "Coordinates3 of LandSection3";
             td:hasCoordinates "0,1,1,2";
 .
     }.
 } WHERE {
-	?farm a was:Farm.
-    ?farm hmas:contains ?LandSection3.
-    ?LandSection3 a was:LandSection.
-    ?LandSection3 td:title "Landsection3 of the farm".
 
-
-
-  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#Coordinates-", strUUID())) AS ?Coordinates3)
+  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#Coordinates-3")) AS ?Coordinates3)
 };
 INSERT {
-    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#>
+    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#>
     {
-        ?LandSection4 hmas:contains ?Coordinates4.
+        <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-4> hmas:contains ?Coordinates4.
         ?Coordinates4 a td:Thing, was:Coordinates;
   			td:title "Coordinates4 of LandSection4";
             td:hasCoordinates "1,1,2,2";
 .
     }.
 } WHERE {
-	?farm a was:Farm.
-    ?farm hmas:contains ?LandSection4.
-    ?LandSection4 a was:LandSection.
-    ?LandSection4 td:title "Landsection4 of the farm".
 
-
-
-  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#Coordinates-", strUUID())) AS ?Coordinates4)
+  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#Coordinates-4")) AS ?Coordinates4)
 };
-
-

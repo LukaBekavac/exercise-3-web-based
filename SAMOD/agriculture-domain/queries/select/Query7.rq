@@ -2,10 +2,9 @@
 PREFIX hmas: <https://purl.org/hmas/>
 PREFIX td: <https://www.w3.org/2019/wot/td#>
 
-SELECT ?Crop WHERE {
+SELECT ?moisture WHERE {
 GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#> {
    bind (<https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#farm-1> as ?farm)
- <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-2> hmas:contains ?Crop.
-   ?Crop a was:Crop.
+   <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#CropA> td:hasrequiredMoisture ?moisture
  }
 }

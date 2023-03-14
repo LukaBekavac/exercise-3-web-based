@@ -2,12 +2,10 @@
 PREFIX hmas: <https://purl.org/hmas/>
 PREFIX td: <https://www.w3.org/2019/wot/td#>
 
-SELECT ?Coordinates WHERE {
-GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#> {
-   bind (<https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#farm-a8139bc7-1cb5-46f8-b3c6-99ffba53db84> as ?farm)
-   ?farm a was:Farm.
-   ?farm hmas:contains ?LandSection1.
-   ?Landsection1 hmas:contains ?Coordinates.
-   ?LandSection1 a was:LandSection.
+SELECT ?coordinates WHERE {
+GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#> {
+   bind (<https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#farm-1> as ?farm)
+   <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-1> hmas:contains ?Coordinates.
+   ?Coordinates td:hasCoordinates ?coordinates
  }
 }

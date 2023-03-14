@@ -8,7 +8,7 @@ PREFIX js: <https://www.w3.org/2019/wot/json-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT {
-    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#>
+    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#>
     {
         ?farm hmas:contains ?LandSection1.
         ?farm hmas:contains ?LandSection2.
@@ -37,8 +37,8 @@ INSERT {
     }.
 } WHERE {
 	?farm a was:Farm.
-  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#LandSection-", strUUID())) AS ?LandSection1)
-    BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#LandSection-", strUUID())) AS ?LandSection2)
-    BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#LandSection-", strUUID())) AS ?LandSection3)
-    BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-danai#LandSection-", strUUID())) AS ?LandSection4)
+  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-1")) AS ?LandSection1)
+    BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-2")) AS ?LandSection2)
+    BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-3")) AS ?LandSection3)
+    BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-4")) AS ?LandSection4)
 }
