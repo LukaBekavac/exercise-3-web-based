@@ -10,56 +10,61 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 INSERT {
     GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#>
     {
-        <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-1> hmas:contains ?Coordinates1.
-        ?Coordinates1 a td:Thing, was:Coordinates;
-  			td:title "Coordinates1 of LandSection1";
-            td:hasCoordinates "0,0,1,1";
+        <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-1> hmas:contains ?CropA.
+        ?CropA a td:Thing, was:Crop.
+        ?CropA a td:Thing, was:Wheat;
+  			td:title "CropA grows in LandSection1";
+     		td:hasrequiredMoisture "120";
+
+
 .
     }.
 } WHERE {
 
-
-  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#Coordinates-1")) AS ?Coordinates1)
-};
-
-INSERT {
-    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#>
-    {
-        <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-2> hmas:contains ?Coordinates2.
-        ?Coordinates2 a td:Thing, was:Coordinates;
-  			td:title "Coordinates2 of LandSection2";
-            td:hasCoordinates "1,0,2,1";
-.
-    }.
-} WHERE {
-
-
-
-  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#Coordinates-2")) AS ?Coordinates2)
+  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#CropA")) AS ?CropA)
 };
 INSERT {
     GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#>
     {
-        <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-3> hmas:contains ?Coordinates3.
-        ?Coordinates3 a td:Thing, was:Coordinates;
-  			td:title "Coordinates3 of LandSection3";
-            td:hasCoordinates "0,1,1,2";
+        <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-2> hmas:contains ?CropB.
+        ?CropB a td:Thing, was:Crop.
+               ?CropB a td:Thing, was:Wheat;
+  			td:title "CropB of LandSection2";
+     		td:hasrequiredMoisture "120";
+
 .
     }.
 } WHERE {
 
-  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#Coordinates-3")) AS ?Coordinates3)
+  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#CropB")) AS ?CropB)
 };
 INSERT {
     GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#>
     {
-        <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-4> hmas:contains ?Coordinates4.
-        ?Coordinates4 a td:Thing, was:Coordinates;
-  			td:title "Coordinates4 of LandSection4";
-            td:hasCoordinates "1,1,2,2";
+         <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-3> hmas:contains ?CropC.
+        ?CropC a td:Thing, was:Crop.
+               ?CropC a td:Thing, was:Corn;
+  			td:title "CropC of LandSection3";
+     		td:hasrequiredMoisture "80";
+
 .
     }.
 } WHERE {
 
-  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#Coordinates-4")) AS ?Coordinates4)
+  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#CropC")) AS ?CropC)
+};
+INSERT {
+    GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#>
+    {
+        <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#LandSection-4> hmas:contains ?CropD.
+        ?CropD a td:Thing, was:Crop.
+               ?CropD a td:Thing, was:Corn;
+  			td:title "CropD of LandSection4";
+     		td:hasrequiredMoisture "80";
+
+.
+    }.
+} WHERE {
+
+  	BIND(IRI(CONCAT("https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#CropD")) AS ?CropD)
 };

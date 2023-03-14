@@ -152,7 +152,7 @@ public class FarmKG extends Artifact {
         final var list = new ArrayList<Object>();
         for(int i = 0; i < 4; i++) {
             JsonObject jsonElement = farmBindings.get(i).getAsJsonObject();
-            JsonObject tdBinding = jsonElement.getAsJsonObject("section");
+            JsonObject tdBinding = jsonElement.getAsJsonObject("LandSection");
             String value = tdBinding.getAsJsonPrimitive("value").getAsString();
             list.add(value);
         }
@@ -172,8 +172,8 @@ public class FarmKG extends Artifact {
                 "GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#> {\n" +
                 "   bind (<"+LandSection+"> as ?LandSection)\n" +
                 "   ?LandSection a was:LandSection. \n" +
-                "   ?LandSection hmas:contains ?Coordiantes.\n" +
-                "   ?Landsection was:hasCoordinates ?coordinates\n" +
+                "   ?LandSection hmas:contains ?Coordinates.\n" +
+                "   ?Coordinates td:hasCoordinates ?coordinates\n" +
                 " }\n" +
                 "}";
         String queryStr = PREFIXES + queryString;
@@ -201,7 +201,8 @@ public class FarmKG extends Artifact {
                 "GRAPH <https://sandbox-graphdb.interactions.ics.unisg.ch/was-exercise-3-luka#> {\n" +
                 "   bind (<"+LandSection+"> as ?LandSection)\n" +
                 "   ?LandSection a was:?LandSection.\n" +
-                "   ?section hmas:contains ?crop.\n" +
+                "   ?LandSection hmas:contains ?crop.\n" +
+                "   ?crop a was:Crop.\n " +
                 " }\n" +
                 "}";
         String queryStr = PREFIXES + queryString;
